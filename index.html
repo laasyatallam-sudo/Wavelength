@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavelength</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Wavelength </h1>
+    <p>Instructions: One player gives a clue, and another player guesses its position on the wheel!</p>
+
+    <div>
+        <p id="clue-display"></p>
+
+        <div id="clue-stage">
+            <p id="secret-target">Secret Target:</p>
+            <label for="clue-input">Enter your clue:</label>
+            <input type="text" id="clue-input">
+            <input type="button" value="Hide target and start guessing" id="hide-target-button">
+        </div>
+
+
+
+        <div id="dial">
+            <div id="target-marker"></div>
+            <div id="needle"></div>
+
+            <div id="endpoint-inputs">
+                <div>
+                    <input type="text" id="left-label-input" placeholder="Cold" aria-label="Left label">
+                </div>
+
+                <div>
+                    <input type="text" id="right-label-input" placeholder="Hot" aria-label="Right label">
+                </div>
+            </div>
+        </div>
+
+        <div id="guess-stage">
+            <div id="spectrum-labels">
+                <span id="left-label">Cold</span>
+                <span id="right-label">Hot</span>
+            </div>
+
+            <input type="range" min="0" max="100" value="50" id="guess-slider">
+            <input type="button" value="Submit guess" id="guess-button">
+            <p id="result"></p>
+
+            <input type="button" id="next-round-button" value="Next Round" disabled>
+
+        </div>
+
+    </div>
+</body>
+</html>

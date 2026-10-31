@@ -1,0 +1,150 @@
+#dial {
+    width: min(460px, 100%);
+    height: auto;
+    aspect-ratio: 2/1;
+    background-color: #b8a4e8;
+    border-radius: 999px 999px 0 0;
+    position: relative;
+    margin: 30px auto 65px;
+}
+
+#needle {
+    width: 4px;
+    height: 90%;
+    background-color: hsl(267, 24%, 37%);
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 2px);
+    transform-origin: bottom center;
+}
+
+#guess-stage {
+    display: none;
+    width: min(460px, 100%);
+    margin: 20px auto;
+}
+
+body {
+    background-color: #fff7ed;
+    color: #65465f;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 18px;
+    max-width: 760px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+
+    background-image: repeating-linear-gradient(
+        180deg,
+        #fff7ed 0px,
+        #fff7ed 24px,
+        #fce8ee 24px,
+        #fce8ee 48px
+    );
+}
+
+
+button, 
+input[type="button"],
+input[type="submit"] {
+    background-color: #ffc4d6;
+    color: #65465f;
+    border: 2px solid #eaa0ba;
+    border-radius: 16px;
+    padding: 12px 18px;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #eaa0ba;
+    font-weight: bold;
+    transition: transform 0.15s, box-shadow 0.15s;
+    font-size: 18px;
+    padding: 16px 24px;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+
+#clue-stage {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 460px;
+    margin: 24px auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 24px;
+    border: 2px solid #f4d5e5;
+    border-radius: 24px;
+    box-shadow: 0 6px 0 #f4d5e5;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #251e35;
+    color: #f5efff;
+    font-size: 16px;
+}
+
+#endpoint-inputs {
+    position: absolute;
+    bottom: -48px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#endpoint-inputs input {
+    width: 110px;
+    box-sizing: border-box;
+}
+
+#right-label-input {
+    text-align: right;
+}
+
+#spectrum-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+#spectrum-labels span {
+    max-width: 45%;
+    overflow-wrap: anywhere;
+}
+
+#guess-slider {
+    width: 100%;
+}
+
+#target-marker {
+    width: 4px;
+    height: 90%;
+    background-color: #ffcf70;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 2px);
+    transform-origin: bottom center;
+    display: none;
+}
+
+button:enabled:active,
+input[type="button"]:enabled:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+h1 {
+    font-size: clamp(40px, 7vw, 64px);
+    margin-bottom: 12px;
+}
